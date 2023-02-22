@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/icon" href="./static/images/laptop-favicon.png"/>
     <link rel="stylesheet" href="./static/css/styles.css">
     <title>home</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Haruto Mori</h2>
+            <ul class="menu">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">experiences</a></li>
+                <li><a href="#">gallery</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">jp</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const menu = document.querySelector(".menu");
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset >= menu.offsetTop) {
+            navbar.classList.add("sticky");
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        });
+    </script>
 </body>
 </html>
